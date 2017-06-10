@@ -1,4 +1,4 @@
-define(['jquery'],function(){
+define(['jquery'],function($){
 	return {
 		setMenu : function(pathname){
 			$('.aside .navs a').removeClass('active');
