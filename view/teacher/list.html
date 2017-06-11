@@ -91,7 +91,13 @@
                     <th>出生日期:</th><td colspan="3">{{tc_birthday}}</td>
                 </tr>
                 <tr>
-                    <th>性别:</th><td>男</td>
+                    <th>性别:</th><td>
+                        {{if tc_gender == 1}}
+                        女
+                        {{else}}
+                        男
+                        {{/if}}
+                    </td>
                     <th>入职日期:</th><td colspan="3">{{tc_join_date}}</td>
                 </tr>
                 <tr>
@@ -120,10 +126,10 @@
                 <td>{{$value.tc_roster}}</td>
                 <td>{{$value.tc_birthday}}</td>
                 <td>
-                    {{if $value.gender == 0}}
-                    男
-                    {{else}}
+                    {{if $value.tc_gender == 1}}
                     女
+                    {{else}}
+                    男
                     {{/if}}
                 </td>
                 <td>{{$value.tc_cellphone}}</td>
