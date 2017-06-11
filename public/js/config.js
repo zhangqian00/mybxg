@@ -8,6 +8,8 @@ requirejs.config({
 		nprogress : 'nprogress/nprogress',
 		validate : 'validate/jquery-validate',
 		form : 'jquery-form/jquery.form',
+		datepicker : 'bootstrap-datepicker/js/bootstrap-datepicker.min',
+		language : 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
 		common : '../js/common',
 		index : '../js/index',
 		login : '../js/login',
@@ -15,12 +17,15 @@ requirejs.config({
 		tealist : '../js/teacher-list',
 		teaadd : '../js/teacher-add'
 	},
-	shim : {//兼容非标准模块 
+	shim : {// 兼容非标准模块 
 		bootstrap : {
 			deps : ['jquery']
 		},
 		validate : {
 			deps : ['jquery']
+		},
+		language : {
+			deps : ['jquery','datepicker']
 		}
 	}
 });
