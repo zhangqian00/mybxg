@@ -6,6 +6,7 @@ requirejs.config({
 		cookie : 'jquery-cookie/jquery.cookie',
 		template : 'artTemplate/template-web',
 		nprogress : 'nprogress/nprogress',
+		echarts : 'echarts/echarts.min',
 		validate : 'validate/jquery-validate',
 		form : 'jquery-form/jquery.form',
 		datepicker : 'bootstrap-datepicker/js/bootstrap-datepicker.min',
