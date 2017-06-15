@@ -9,7 +9,7 @@ define(['jquery','util','validate','form'],function($,util){
 				url : '/api/course/create',
 				success : function(data){
 					// 创建课程后跳转到下一步
-					location.href = '/course/basic?cs_id' + data.result.cs_id;
+					location.href = '/course/basic?cs_id=' + data.result.cs_id;
 				}
 			});
 		}
