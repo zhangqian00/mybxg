@@ -1,5 +1,5 @@
 ## 登录页
-![image login](https://github.com/AlertZq/mybxg/blob/master/img-folder/course.jpg)
+![image login](https://github.com/AlertZq/mybxg/blob/master/img-folder/login.jpg)
 ## 主页
 ![image index](https://github.com/AlertZq/mybxg/blob/master/img-folder/index.jpg)
 ## 个人中心
