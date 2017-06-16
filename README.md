@@ -28,12 +28,13 @@
 - mybxg-doc为接口文档
 
 # 本地测试需要搭建自己的环境
+### 将项目文件放到E盘为例
 
 # Apache配置
 ## 配置网站跟路径(239行)
 ```html
-DocumentRoot "e:/heima6/"
-<Directory "e:/heima6/">
+DocumentRoot "e:/mybxg/"
+<Directory "e:/mybxg/">
 ```
 
 ## 配置虚拟主机 
@@ -45,16 +46,24 @@ Include conf/extra/httpd-vhosts.conf
 ### 步骤二：extra/httpd-vhost.conf文件
 ```
 <VirtualHost *:80>
-    DocumentRoot "e:/myweb/ajax"
-    ServerName studyit.com
-    ServerAlias www.studyit.com
-    DirectoryIndex abc.html
+    DocumentRoot "e:/mybxg/mybxg"
+    ServerName mybxg.com
+    ServerAlias www.mybxg.com
+    ProxyPass /api http://api.studyit.com
+</VirtualHost>
+```
+```
+<VirtualHost *:80>
+    DocumentRoot "e:/mybxg/doc/studyit-doc/preview/"
+    ServerName doc.studyit.com
+    DirectoryIndex doc.html
 </VirtualHost>
 ```
 ### 步骤三：配置hosts文件（C:\Windows\System32\drivers\etc\hosts)
 ```
-127.0.0.1       studyit.com
-127.0.0.1       www.studyit.com
+127.0.0.1       mybxg.com
+127.0.0.1       www.mybxg.com
+127.0.0.1       doc.mybxg.com
 ```
 ### 步骤四：重启Apache服务器
 
@@ -63,16 +72,6 @@ Include conf/extra/httpd-vhosts.conf
 ```
 LoadModule proxy_module modules/mod_proxy.so
 LoadModule proxy_http_module modules/mod_proxy_http.so
-```
-### 步骤二：配置conf/extra/httpd-vhosts.conf文件
-```
-<VirtualHost *:80>
-    DocumentRoot "e:/heima6/jerry/studyit-bxg"
-    ServerName studyit.com
-    ServerAlias www.studyit.com
-    ProxyRequests Off
-    ProxyPass /api http://api.studyit.com
-</VirtualHost>
 ```
 
 ## 地址栏隐藏index.php配置
