@@ -1,3 +1,4 @@
+## 项目基于requireJS
 ## 登录页
 ![image login](https://github.com/AlertZq/mybxg/blob/master/img-folder/login.jpg)
 ## 主页
