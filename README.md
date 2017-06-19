@@ -86,3 +86,5 @@ LoadModule rewrite_module modules/mod_rewrite.so
 AllowOverride All
 ```
 
+# mybxg-sql本地数据库MySQL搭建
+
